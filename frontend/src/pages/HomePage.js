@@ -31,7 +31,7 @@ const HomePage = () => {
     try {
       if (searchQuery.trim()) {
         const response = await searchBookings(searchQuery);
-        setBookings(response.data);
+        setBookings(response.data || []);
         setTotalPages(1);
       } else {
         const params = {
@@ -48,11 +48,12 @@ const HomePage = () => {
         });
         
         const response = await getBookings(params);
-        setBookings(response.data);
+        setBookings(response.data || []);
         setTotalPages(response.totalPages || 1);
       }
     } catch (err) {
       setError(err.error || 'Failed to fetch bookings');
+      setBookings([]);
       console.error('Error fetching bookings:', err);
     } finally {
       setLoading(false);
@@ -121,7 +122,7 @@ const HomePage = () => {
               <div className="error-message">
                 <p>⚠️ {error}</p>
               </div>
-            ) : bookings.length === 0 ? (
+            ) : !bookings || bookings.length === 0 ? (
               <div className="no-results">
                 <p>📭 No bookings found</p>
                 <p className="sub-text">Try adjusting your search or filters</p>
@@ -129,7 +130,7 @@ const HomePage = () => {
             ) : (
               <>
                 <div className="results-info">
-                  <p>Showing {bookings.length} booking(s)</p>
+                  <p>Showing {bookings?.length || 0} booking(s)</p>
                 </div>
                 <div className="bookings-grid">
                   {bookings.map((booking) => (
