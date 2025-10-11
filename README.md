@@ -40,7 +40,6 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) web application for mana
 - **Mongoose** 7.5.0 - MongoDB ODM
 - **Morgan** - HTTP request logger
 - **CORS** - Cross-Origin Resource Sharing
-- **Validator** - Input validation
 
 ## 📁 Project Structure
 
