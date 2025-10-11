@@ -2,7 +2,7 @@
 
 A full-stack MERN (MongoDB, Express.js, React, Node.js) web application for managing car wash service bookings. Users can create, view, update, and delete bookings, search and filter appointments, and track service status.
 
-![Car Wash Booking]([https://via.placeholder.com/800x400?text=Car+Wash+Booking+Application](https://github.com/0912shivam/Car-Washing-Booking/blob/main/screenshots/Screenshot%20(194).png))
+![Car Wash Booking](screenshots/Screenshot%20(194).png)
 
 ## 🚀 Features
 
