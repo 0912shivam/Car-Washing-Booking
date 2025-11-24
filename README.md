@@ -391,9 +391,9 @@ npm run seed
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername]
-- Email: your.email@example.com
+SHIVAM SHARMA
+- GitHub: 0912shivam
+- Email: sharmashivam8970@gmail.com
 
 ## 📝 License
 
